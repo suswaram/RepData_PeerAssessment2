@@ -338,10 +338,10 @@ economicData$normCost <- (economicData$totalCost_Bn - min(economicData$totalCost
     min(economicData$totalCost_Bn))
 
 # plot
-pal <- colorRamp(c("white", "green"))
+pal <- colorRamp(c("red", "magenta"))
 map("state", regions = economicData$stateName, lty = 1, lwd = 1, boundary = TRUE, 
     fill = TRUE, col = rgb(pal(economicData$normCost)/255))
-title(main = "Most harmed states by weather events with economic impact\n (green: most harmed, white: least harmed)")
+title(main = "Most harmed states by weather events with economic impact\n (magenta: most harmed, red: least harmed)")
 ```
 
 ![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16.png) 
@@ -446,10 +446,10 @@ healthData$normCost <- (healthData$totalHealthCost - min(healthData$totalHealthC
     min(healthData$totalHealthCost))
 
 # plot
-pal <- colorRamp(c("white", "red"))
+pal <- colorRamp(c("blue", "green"))
 map("state", regions = healthData$stateName, lty = 1, lwd = 1, boundary = TRUE, 
     fill = TRUE, col = rgb(pal(healthData$normCost)/255))
-title(main = "Most harmed states by weather events with health impact\n (red: most harmed, white: least harmed)")
+title(main = "Most harmed states by weather events with health impact\n (green: most harmed, blue: least harmed)")
 ```
 
 ![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18.png) 
